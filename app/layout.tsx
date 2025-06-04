@@ -10,9 +10,9 @@ import Clarity from "@microsoft/clarity";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AmanEx - Next-Generation Fintech Solutions",
+  title: "AmanEx - Fintech Solutions",
   description:
-    "Revolutionizing financial services with cutting-edge technology and seamless user experiences",
+    "Revolutionizing financial structured products with cutting-edge technology and seamless user experiences",
 };
 
 export default function RootLayout({

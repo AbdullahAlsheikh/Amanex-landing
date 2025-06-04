@@ -16,7 +16,7 @@ const timelineEvents = [
     description:
       "Our journey began with a vision to provide accessable financial services.",
     details:
-      "Founded by former Goldman Sachs executives Sarah Chen and Michael Rodriguez, AmanEx started with the mission to make financial services more accessible and efficient through innovative technology solutions.",
+      "Founded by Mishal Alhawwas and  Abdullah Alsheikh, AmanEx started with the mission to make financial structured products more accessible and efficient through innovative technology solutions.",
   },
   // {
   //   year: 2020,
