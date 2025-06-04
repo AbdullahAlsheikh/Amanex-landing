@@ -46,7 +46,7 @@ export default function ContactForm() {
 
     try {
       const response = await fetch(
-        "https://finapp-backend-1alx.onrender.com/contact",
+        "https://finapp-backend-1alx.onrender.com/contact/add-contact",
         {
           method: "POST",
           headers: {
