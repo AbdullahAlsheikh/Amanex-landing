@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import type React from "react";
+import Clarity from "@microsoft/clarity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const projectId = "ru41ee2jpg"; // Replace with your actual Project ID
+
+  if (typeof window !== "undefined") {
+    // Ensure this runs only on the client-side
+    Clarity.init(projectId);
+  }
   return (
     <html lang="en" suppressHydrationWarning>
       <body
