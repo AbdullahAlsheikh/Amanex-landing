@@ -45,13 +45,16 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:8000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        "https://finapp-backend-1alx.onrender.com/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to submit form");
