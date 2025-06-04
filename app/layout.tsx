@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import type React from "react";
-import Clarity from "@microsoft/clarity";
+import { ClarityProvider } from "./components/ClarityProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,18 +20,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const projectId = "ru41ee2jpg"; // Replace with your actual Project ID
-
-  if (typeof window !== "undefined") {
-    // Ensure this runs only on the client-side
-    Clarity.init(projectId);
-  }
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className} min-h-screen bg-background text-foreground`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ClarityProvider />
           <Header />
           <main>{children}</main>
           <Footer />
